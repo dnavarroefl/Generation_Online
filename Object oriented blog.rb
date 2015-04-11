@@ -1,7 +1,5 @@
-#Two Classes: Blog and Post
 class Blog
 
-#A blog should be able to create and show a front page through the methods create_front_page and publish_front_page
 def create_front_page
 blog.create_front_page
 end 
@@ -22,7 +20,6 @@ end
 
 class Post
 
-#Every post has a title, a date and text. So it needs also the methods to get that information.
 def initialize(t,d,txt,n)
 @title, @date, @text, @number = t,d,txt,n)
 end 
