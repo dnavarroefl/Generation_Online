@@ -1,66 +1,42 @@
 class Blog
-
-def create_front_page
-blog.create_front_page
-end 
- 
-blog = Blog.new
-blog.push Post.new("Post title 1
-**************")
-blog.push Post.new("Post title 2
-**************")
-blog.push Post.new("Post title 3
-**************")
-end
-
-def publish_front_page
-blog.publish_front_page
-end
+    
+    def publish_front_page
+    end 
+    def create_front_page
+    end 
+    
+    blog = Blog.new
+    blog.publish_front_page
+    blog.create_front_page
 end
 
 class Post
-
-def initialize(t,d,txt,n)
-@title, @date, @text, @number = t,d,txt,n)
+    
+    attr_accessor :title, :date, :text, :number
+	def initialize (title, date, text, number)
+	@title = title
+	@date = date
+	@text = text
+	@number = number
+	end 
 end 
 
-def printTitle
-@title
-end
+    def title
+        puts "Post title", "**************"
+    end 
+    def date
+        puts Time.now
+    end
+    def text
+        puts "Post text", "----------------"
+    end
 
-def printDate
-@date
-end
-
-def printText
-@text
-end
-
-def printNumber
-@number
-end
-
-def number
-number = Number.new (1, 2, 3)
-post.Number(1,2,3)
 3.times do 
-print.Number
-break if number <= 3
+    puts title, text, date 
 end 
-end
-
-post = Post.new ("Post title" + "number" + "d/mm/yyyy" + "text")
-
-x = post.printTitle("Post title" + "")
-y = post.printDate("d/mm/yyyy")
-z = post.printText("Post" + "" + "text")
-n = post.printNumber("number")
-
-end
+3.times do 
+    puts title, text, date 
 end 
-
-puts "#{x} + #{n}."
-puts "Posted on #{y}."
-puts "Post #{n} + #{z}."
-
-
+2.times do 
+    puts title, text, date
+end 

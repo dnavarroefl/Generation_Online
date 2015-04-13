@@ -11,10 +11,10 @@ cart.add :watermelon
 
 cart.show
 "1 apple: 10$
- 1 orange: 5$
- 1 grape: 15$
- 1 banana: 20$
- 1 watermelon: 50$"
+1 orange: 5$
+1 grape: 15$
+1 banana: 20$
+1 watermelon: 50$"
 
 cart.cost = 100$ 
 
@@ -35,10 +35,7 @@ discount = Discount.new
 cart.push Discount.new(2 :apple == 1 :apple)
 cart.push Discount.new(3 :orange == 2 :orange
 cart.push Discount.new(4 :grape == 4 :grapes + "one banana for free")
-end
-def printDiscount
-print.Discount("")
-end 
+endd 
 
 #Our fruits don't have the same price during all the year. 
 ##We need to change their price depending on the season using the following table
@@ -52,23 +49,23 @@ grapes        15$    15$    15$    15$
 banana        20$    20$    20$    21$"
 
 season = Season.new
-	def initialize (spr, sum, aut, win)
-	@Spring = spr
-	@Summer = sum
-	@Autumn = aut
-	@Winter = win
+	def initialize (spring, summmer, autumn, winter)
+	@Spring = spring
+	@Summer = summmer
+	@Autumn = autumn
+	@Winter = winter
 end 
 
-spr = "1 :apple == 10, 1 :orange == 5, 1 :grape == 15,1 :banana == 20, 1 :watermelon == 50 " 
-sum = "1 :apple == 10, 1 :orange == 2, 1 :grape == 15,1 :banana == 20, 1 :watermelon == 50 "
-aut = "1 :apple == 15, 1 :orange == 5, 1 :grape == 15,1 :banana == 20, 1 :watermelon == 50 "
-win = "1 :apple == 12, 1 :orange == 5, 1 :grape == 15,1 :banana == 21, 1: watermelon == 50 "
+spring = "1 :apple == 10, 1 :orange == 5, 1 :grape == 15,1 :banana == 20, 1 :watermelon == 50 " 
+summer = "1 :apple == 10, 1 :orange == 2, 1 :grape == 15,1 :banana == 20, 1 :watermelon == 50 "
+autumn = "1 :apple == 15, 1 :orange == 5, 1 :grape == 15,1 :banana == 20, 1 :watermelon == 50 "
+winter = "1 :apple == 12, 1 :orange == 5, 1 :grape == 15,1 :banana == 21, 1: watermelon == 50 "
 end
 
-puts "These are the prices in Spring: #{spr}."
-puts "These are the prices in Summer: #{sum}."
-puts "These are the prices in Autumn: #{aut}."
-puts "These are the prices in Winter: #{win}."
+puts "These are the prices in Spring: #{spring}."
+puts "These are the prices in Summer: #{summmer}."
+puts "These are the prices in Autumn: #{autumn}."
+puts "These are the prices in Winter: #{winter}."
 
 #Watermelon costs the same through all the year (50$) excepting on Sunday when its price is doubled.
 
@@ -76,10 +73,6 @@ sunday = Sunday.new
 cart.push Sunday.new(:watermelon = 100$) 
 end
 end
-puts "The prices through the year are these: #{spr}, 
-#{sum}, 
-#{aut} 
-and 
-#{win}." 
+puts "The prices through the year are these: #{spring}, #{summmer}, #{autum} and #{winter}." 
 puts "Except on Sunday, when the price of a watermelon is #{:watermelon}." 
 
