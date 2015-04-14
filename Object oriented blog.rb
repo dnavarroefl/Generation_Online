@@ -40,3 +40,8 @@ end
 2.times do 
     puts title, text, date
 end 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
