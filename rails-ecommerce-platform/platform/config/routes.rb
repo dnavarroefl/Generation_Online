@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-Rails.application.routes.draw do
-  root :to => "articles#index"
-  resources :articles
+  root :to => "laptops#index"
+  resources :articles, :laptops, :backpacks
 
 end
