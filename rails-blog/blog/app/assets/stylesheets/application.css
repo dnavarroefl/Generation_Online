@@ -16,7 +16,30 @@
 
 body { 
 	 text-align: center;
-	 border: solid;
-	 margin: 50px;
-	 padding: 50px;
+	 font-size: 20px; 
+	 background-color: white;
+	 padding: 25px;
+	 border: none;
+	 margin: 25px;
+	}
+
+h1 {
+	text-align: center;
+	color: white;
+	background-color: #C01919;
+	padding: 10px;
+	border: none;
+	margin: 10px;
+	}
+
+div.img1 {
+	float: auto;
+	}
+	
+footer {
+	text-align: center;
+	font-size: 16px;
+	padding: 25px;
+	border: none;
+	margin: 25px;
 }

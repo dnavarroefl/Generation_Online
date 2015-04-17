@@ -1,0 +1,34 @@
+<h1>Edit your laptop</h1>
+
+<%= form_for :laptop, url: article_path(@laptop), method: :patch do |f| %>
+  <p>
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </p>
+
+ <p>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </p>
+
+   <p>
+    <%= f.label :processor %><br>
+    <%= f.text_field :process %>
+  </p>
+
+   <p>
+    <%= f.label :ram %><br>
+    <%= f.text_field :ram %>
+  </p>
+
+   <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+  <%= link_to 'Back', laptops_path%>

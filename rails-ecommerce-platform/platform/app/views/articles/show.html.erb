@@ -1,14 +1,24 @@
+
 <p>
   <strong>Product:</strong>
   <%= @article.title %>
 </p>
+ 
+<b>Edit info about feature: </b>
+<%= form_for([@article, @article.features.build]) do |f| %>
+  <p>
+    <%= f.label :feature %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Features:</strong>
-  	<%= @article.text %>
-</p>
-
-<%= link_to 'Edit', articles_path(@article)%> 
-<%= link_to 'Back', articles_path %>
-</p>
+<%= link_to 'Edit Product', edit_article_path(@article) %> |
+<%= link_to 'Back to Index', articles_path %>
 

@@ -1,11 +1,11 @@
 <%= form_for @article do |f| %>
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :text %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
+    <%= f.label :title %><br>
     <%= f.text_area :text %>
   </p>
 
@@ -14,6 +14,4 @@
   </p>
 <% end %>
 
-<p>
 <%= link_to 'Back', articles_path %>
-</p>

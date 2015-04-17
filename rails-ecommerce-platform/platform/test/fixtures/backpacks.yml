@@ -2,8 +2,14 @@
 
 one:
   product: MyString
-  features: MyText
+  color: MyText
+  capacity: MyText
+  pockets: MyText
+  waterproof: MyText
 
 two:
   product: MyString
-  features: MyText
+  color: MyText
+  capacity: MyText
+  pockets: MyText
+  waterproof: MyText

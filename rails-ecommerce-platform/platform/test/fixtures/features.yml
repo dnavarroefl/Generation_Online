@@ -2,14 +2,10 @@
 
 one:
   product: MyString
-  model: MyText
-  processor: MyText
-  ram: MyText
-  price: MyText
+  body: MyText
+  article_id: 
 
 two:
   product: MyString
-  model: MyText
-  processor: MyText
-  ram: MyText
-  price: MyText
+  body: MyText
+  article_id: 
