@@ -1,0 +1,13 @@
+<h1>eCommerce Platform</h1> 
+<% @ecommerce.each do |ecommerce|%>
+    <div><%= ecommerce.title %> 
+
+        <%= link_to 'Show',  ecommerces_path(ecommerce)%>
+        <%= link_to 'Edit', edit_ecommerces_path(ecommerce) %>
+        <%= link_to 'Destroy', ecommerces_path(ecommerce), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+<% end %>
+
+<p>
+    <%= link_to 'New product', new_ecommerces_path %>
+</p>

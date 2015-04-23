@@ -1,0 +1,14 @@
+<h3>
+  <strong>Product:</strong>
+  <%= @laptop.product %>
+</h3>
+
+<p>
+  <strong>Features:</strong>
+  <%= @laptop.feature %>
+</p>
+
+<p>
+    <%= link_to 'New laptop', new_laptops_path %>
+	<%= link_to 'Back', laptops_path %>
+</p>

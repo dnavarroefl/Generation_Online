@@ -1,0 +1,19 @@
+ <h1>Backpacks</h1>
+	<% @backpacks.each do |backpack|%>
+	<div><%= backpack.title %>
+<p>
+		<%= link_to 'Show',  backpacks_path(backpack)%>
+        <%= link_to 'Edit', edit_backpacks_path(backpack) %>
+        <%= link_to 'Destroy', backpacks_path(backpack), method: :delete, data: { 
+        	confirm: 'Are you sure?' } %>
+</p>
+	</div>
+<% end %>
+
+<div>
+<img id="backpacks", src= http://media.mwcradio.com/mimesis/2014-12/29/backpacks_jpg_475x310_q85.jpg>
+</div>
+
+<p>
+<%= link_to 'New product', new_backpack_path %> 
+</p>

@@ -1,0 +1,41 @@
+<p>
+  <strong>Product:</strong>
+  <%= @laptop.product %>
+</p>
+
+<p>
+  <strong>Brand:<br>
+	<%= @laptop.brand %>
+  </strong>
+</p>
+
+<p>
+  <strong>Model:<br>
+	<%= @laptop.model %>
+  </strong>
+</p>
+
+<p>
+  <strong>Processor:<br>
+	<%= @laptop.processor %>
+  </strong> 	
+</p>
+
+<p>
+  <strong>RAM:<br>
+	<%= @laptop.ram %>
+  </strong>	
+</p>
+
+<p>
+  <strong>Price:<br>
+	<%= @laptop.price %>
+  </strong>	
+</p>
+
+<% end %>
+
+<p>
+<%= link_to 'Edit product', laptops_path(@laptop)%> 
+<%= link_to 'Back to index', laptops_path %>
+</p>

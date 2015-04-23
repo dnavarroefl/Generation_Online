@@ -1,0 +1,35 @@
+<p>
+  <strong>Product:</strong>
+  <%= @backpack.product %>
+</p>
+
+<p>
+  <strong>Color:<br>
+  <%= @backpack.color %>
+  </strong>
+</p>
+
+<p>
+  <strong>Capacity:<br>
+  <%= @backpack.capacity %>
+  </strong>
+</p>
+
+<p>
+  <strong>Pockets:<br>
+  <%= @backpack.pocket %>
+  </strong>   
+</p>
+
+<p>
+  <strong>Waterproof:<br>
+  <%= @backpack.water %>
+  </strong> 
+</p>
+
+<% end %>
+
+<p>
+<%= link_to 'Edit product', backpacks_path(@backpack)%> 
+<%= link_to 'Back to index', backpacks_path %>
+</p>

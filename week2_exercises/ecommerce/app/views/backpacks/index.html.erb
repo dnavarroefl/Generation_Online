@@ -1,0 +1,13 @@
+<h1> Backpacks </h1>
+
+<ul>
+<% @backpacks.each do |backpack| %>
+	<li><%= "Color: #{backpack.color}" %></li>
+
+	<%= link_to 'Show',  backpack_path(laptop)%>
+    <%= link_to 'Edit', edit_backpack_path(laptop) %>
+	<%= link_to 'Destroy', backpack_path(laptop), method: :delete, data: {confirm: 'Are you sure?'} %>
+<% end %>
+</ul>
+
+<%= link_to "New backpack", new_backpack_path %>  

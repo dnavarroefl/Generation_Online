@@ -1,0 +1,14 @@
+<h3>
+  <strong>Product:</strong>
+  <%= @backpack.product %>
+</h3>
+
+<p>
+  <strong>Features:</strong>
+  <%= @backpack.feature %>
+</p>
+
+<p>
+    <%= link_to 'New backpack', new_backpacks_path %>
+	<%= link_to 'Back', backpacks_path %>
+</p>

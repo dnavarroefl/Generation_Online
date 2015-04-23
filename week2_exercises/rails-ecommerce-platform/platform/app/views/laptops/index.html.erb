@@ -1,0 +1,18 @@
+<h1>Laptops</h1>
+	<% @laptops.each do |laptop|%>
+	<div><%= laptop.title %>
+<p>
+		<%= link_to 'Show',  laptops_path(laptop)%>
+        <%= link_to 'Edit', edit_laptops_path(laptop) %>
+        <%= link_to 'Destroy', laptops_path(laptop), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</p>
+	</div>
+<% end %>
+
+<div>
+<img id="laptops", src= http://im.ziffdavisinternational.com/t/pcmag_me/photo/default/10-best-laptops_8z9p.640.jpg>
+</div>
+
+<%= link_to 'New product', new_laptop_path %> 
+

@@ -1,0 +1,14 @@
+<h1>Listing products</h1> 
+<% @backpack.each do |backpack|%>
+    <div><%= backpack.title %> 
+
+        <%= link_to 'Show',  backpack_path(article)%>
+        <%= link_to 'Edit', edit_backpack_path(article) %>
+        <%= link_to 'Destroy', backpack_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+<% end %>
+
+<p>
+    <%= link_to 'New product', new_backpack_path %>
+
+</p>
