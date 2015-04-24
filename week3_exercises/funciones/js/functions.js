@@ -176,54 +176,65 @@ function arrayAwesomenator( array )
 	array = beautifyNumbers( array );
 	array = sortArray( array );
 	array = arrayToString( array );
-	numbers = [0-9];
-	letters = ["^A-Za-z"];
 
 	return array;
 }
+
 function deleteRubbish( array )
 //It receives an array and returns it without '*' chars
 //Example:  deleteRubbish(['a',1,'*',5]) returns ['a',1,5]
-{	
-	var array = [];
-	numbers = [0-9];
-	letters = ["^A-Za-z"];
-	array.replace(["*"]);
-	return array; 
-	}
-deleteRubbish();
-}
+{
+	var deleteRubbish = [];
+	var chars = ["*"]; 
+	var result = ''; 
 
-function arrangeElements( array )
+	for (var i = 0; i < array.length; i++) {
+		console.log(array[i]);
+	}
+	console.log(array.shift([4]), array.shift([0]));  
+	return result; 
+}
+console.log(deleteRubbish(["a", 6, "B", "F", "*", 8, 78, "J"]));
+console.log(deleteRubbish(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]));
+
+
+function arrangeElements( array, result)
 //It receives an array with numbers and letters mixed and returns it with its items arrange:
 //Example: arrangeElements(['B', 'a', 4 , 23, 'J']) returns [23, 4, 'B', 'a', 'J']
 //First goes the numbers and then the letters. The order of the elements together does not matter.
 {
-	var array = [];
-	numbers = [0-9];
-	letters = ["^A-Za-z"];
-	array.join(["^A-Za-z_0-9"]);
-	array.join([0-9]);
-	array.sort(function(a, b){return a-b});	
-	}
-arrangeElements(); 
-}
+	var arrangeElements = [];
+	var result = ''; 
 
-function beautifyLetters( array )
+	for (var i = 0; i < array.length; i++) {
+		console.log(array[i]);
+	}
+	console.log(array.sort());
+	return result; 
+}
+console.log(arrangeElements(["a", 6, "B", "F", "*", 8, 78, "J"]));
+console.log(arrangeElements(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]));
+
+function beautifyLetters( array, vowels, consonants, result )
 //It receives an array with numbers and letters and returns it with uppercase vowels and lowercase consonants. Numbers remain unchanged
 //Example: beautifyLetters([1,5,7,'a','J',p,'E']) returns [1,5,7,'A','j',p,'E']
 {
-	var array = [];
-	vowels = ["A,E,I,O,U"];
-	consonants = ["B-D]|[F-H]|[J-N]|[P-T]|[V-Z"];
-	vowels.toUpperCase([]);
-	consonants.toLowerCase([]);
-	return array;
-	}
-beautifyLetters(); 
-}
+	var beautifyLetters = [];
+	var vowels = ["A"];
+	var consonants = ["b","f","j","c","r","q","y"];
+	var result = ''; 
 
-function beautifyNumbers( array )
+	for (var i = 0; i < array.length; i++) {
+		console.log(array[i]);
+	}
+	console.log(vowels);
+	console.log(consonants); 
+	return result; 
+}
+console.log(beautifyLetters(["a", 6, "B", "F", "*", 8, 78, "J"]));
+console.log(beautifyLetters(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]));
+
+function beautifyNumbers( array, numbers, result )
 //It receives an array with numbers and letters and returns it with its numbers beautified. Letters remain unchanged
 //Beautify process is to reduce a number into a single digit number by adding all its digits together: 
 // 123 = 6 because 1+2+3 = 6
@@ -232,42 +243,54 @@ function beautifyNumbers( array )
 // 793 = 1 because 7+9+3 = 19 -> 1+9 = 10 -> 1+0 = 1
 //Example: beautifyNumbers([23,59, 4,'A','b']) returns [5, 5, 4, 'A', 'b']
 {
-	var array = [];
-	numbers = [0-9]
-	letters = ["^A-Za-z"];
-	array.join([0-9]);
-	return array;	
+	var beautifyNumbers = [];
+	var numbers = [0-9];
+	var letters = ["^A-Za-z"];
+	var result = ''; 
+
+	for (var i = 0; i < array.length; i++) {
+		console.log(array[i]);	
 	}
-beautifyNumbers();
+	console.log(array.join());
+	
+	return result; 
 }
-function sortArray( array )
+console.log(beautifyNumbers(["a", 6, "B", "F", "*", 8, 78, "J"]));
+console.log(beautifyNumbers(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]));
+
+
+function sortArray( array, numbers, letters, result ){
 //It receives an array with numbers and letters and returns it with its items sorted. Numbers on one side and letters on the other.
 //Example: sortArray([5,5, 4, 1, 'j', A','b', 'E']) returns [1, 4, 5, 5, 'A', 'b', 'E', 'j']
-{
 	
-	var array = [];
-	numbers = [0-9];
-	letters = ["^A-Za-z"];
-	array.join([0-9];
-	array.join(["^A-Za-z"]);
-	array.sort([0-9]);
-	array.sort(["^A-Za-z"]);
-	return array;
+	var sortArray = []; 
+	var result = '';
+   
+	for (var i = 0; i < array.length; i++) {
+		console.log(array[i]);
 	}
-	sortArray();
+	console.log(array.sort(), array.join());
+	return result; 
+
 }
-function arrayToString( array )
+console.log(sortArray(["a", 6, "B", "F", "*", 8, 78, "J"]));
+console.log(sortArray(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]));
+	
+function arrayToString( array ){
 //It receives an array and returns a string with all its elements.
 //Example: arrayToString([1, 4, 5, 5, 'A', 'b', 'E', 'j']) returns "1455AbEj"
-	{
-	var array = [];
-	array.toString([0-9]);
-	array.toString(["^A-Za-z"]);
-	return array;
-	}
-arrayToString();
-}
+	var arrayToString = [];
+	var result = ''; 
 
+	for (var i = 0; i < array.length; i++) {
+		console.log(array[i]);
+	}
+	console.log(array.toString());
+	return result; 
+}
+console.log(arrayToString(["a", 6, "B", "F", "*", 8, 78, "J"])); 
+console.log(arrayToString(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]));
+	
 console.log(arrayAwesomenator(["a", 6, "B", "F", "*", 8, 78, "J" ]) === "668Abfj");
 console.log(arrayAwesomenator(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]) === "46688AAbcfjjqry");
 

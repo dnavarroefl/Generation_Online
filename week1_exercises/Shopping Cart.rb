@@ -1,76 +1,61 @@
-#We need something that calculates the total cost of our purchases 
-##but also that applies some discounts to some items.
+require 'pry' 
 
-cart = ShoppingCart.new
+class ShoppingCart
+	@@prices_list = {
+	:apple => 10,
+	:banana => 5,
+	:orange => 15,
+	:grape => 20
+	:watermelon => 50
+}
 
-cart.add :apple
-cart.add :banana
-cart.add :orange
-cart.add :grape
-cart.add :watermelon
+def initialize
+		@cart = Hash.new 0	
+	end
 
-cart = [10, 5, 15, 20, 50]
-<<<<<<< HEAD
+	def get_item_price item
+		@@prices_list[item]
+	end
 
+	def add_item_to_cart item 
+		@cart[item] += 1
+	end	
 
-=======
->>>>>>> origin/master
-cart.cost = 100
-end 
-#Add the discount functionality to the previous exercise.
-cart.each do |x|
-  x % 100
-  print "#{x}"
+def show
+		shopping_cart_calculated = calculate_shopping_cart
+		
+		shopping_cart_calculated.each_with_index do |(key,value),index|
+			puts "#{index+1}: #{key} => #{@cart[key]} items #{value}€"
+		end
 end
 
-<<<<<<< HEAD
-def discount
+def calculate_shopping_cart
+		calculated_cart = {}
+		@cart.each do |key,value|
+			calculated_cart[key] = get_item_price(key) * value
+		end
+		calculated_cart			
+	end	
+
+	def get_cost
+		shopping_cart_calculated = calculate_shopping_cart
+		shopping_cart_calculated.reduce(0) {|sum, (key, val)| sum += val}
+	end
 
 end
 
-end 
-=======
-#At this moment we have this deals:
-    #* Buy 2 apples and pay just one!
-    #* Buy 3 oranges and pay just 2!
-    #* Buy 4 grapes you get one banana for free if you want!"
->>>>>>> origin/master
+shopping_cart = ShoppingCart.new
 
-#Our fruits don't have the same price during all the year. 
-##We need to change their price depending on the season using the following table
+shopping_cart.add_item_to_cart :apple
+shopping_cart.add_item_to_cart :apple
+shopping_cart.add_item_to_cart :orange
+shopping_cart.add_item_to_cart :orange
+shopping_cart.add_item_to_cart :orange
+shopping_cart.add_item_to_cart :grape
+shopping_cart.add_item_to_cart :grape
+shopping_cart.add_item_to_cart :grape
+shopping_cart.add_item_to_cart :grape
+shopping_cart.add_item_to_cart :banana
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
-#Prices of fruit per season
-spring = [10, 5, 15, 20, 50] 
-summer = [10, 2, 15, 20, 50]
-autumn = [15, 5, 15, 20, 50]
-winter = [12, 5, 15, 21, 50]
-
-season = Season.new
-	def initialize (spring, summmer, autumn, winter)
-	@Spring = spring
-	@Summer = summmer
-	@Autumn = autumn
-	@Winter = winter
-end 
-
-season.spring
-season.summer
-season.autumn
-season.winter
-
-#Watermelon costs the same through all the year (50$) excepting on Sunday when its price is doubled.
-
-sunday = Sunday.new
-<<<<<<< HEAD
-Sunday.new(:watermelon = 100$) 
-
-=======
-	:watermelon == 100$ 
-end 
-end
->>>>>>> origin/master
-
+shopping_cart.show
+puts "The cost of your shopping cart is #{shopping_cart.get_cost}€"
